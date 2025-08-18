@@ -9,6 +9,7 @@ require('dotenv').config();
 const authRoutes = require("./routes/authRoutes");
 const profileRoutes = require("./routes/profileRoutes");
 const userRoutes = require("./routes/userRoutes");
+const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const app = express();
 app.use(
@@ -19,13 +20,14 @@ app.use(
   })
 );
 
-app.use(cookieParser());
+app.use(cookieParser());6+
 app.use(express.json());
 
 // Routes
 app.use('/auth' , authRoutes);
 app.use('/profile' , profileRoutes);
 app.use('/users' , userRoutes);
+app.use('/dashboard' , dashboardRoutes);
 
 app.get('/' , (req,res)=>{
   res.json({message: "Hello from express on Railway"});
