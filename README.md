@@ -1,18 +1,10 @@
-# My Project
-Fullstack app with React + Node.js + Express  
+# My Express API
 
-## Features
-- User authentication (JWT)
-- REST API (CRUD)
-- Responsive UI with modern design
+This is a simple Node.js + Express backend API for my React frontend hosted on Vercel.
 
-## Tech Stack
-- React (Frontend)
-- TailwindCSS (Styling)
-- shadcn/ui (UI Components)
-- Node.js + Express (Backend)
+## 🛠️ Features
+- REST API endpoints for frontend consumption
+- Environment-based port configuration (`process.env.PORT`)
+- CORS-ready for React frontend
 
-
-## How to run
-1. cd server && npm install && npm node index.js
-2. cd client && npm install && npm run dev
+## 📂 Project Structure
