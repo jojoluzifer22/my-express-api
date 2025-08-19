@@ -14,7 +14,7 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 const app = express();
 app.use(
   cors({
-    origin:[ 'http://localhost:5173',"https://react-web-project-delta.vercel.app" ],
+    origin:[ 'http://localhost:5173',"https://react-web-project-delta.vercel.app" , "https://react-web-project-1s2kkg19b-kitsada-papanudias-projects.vercel.app" ],
     
     credentials: true,
   })
