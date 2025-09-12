@@ -21,7 +21,7 @@ app.use(
   })
 );
 
-app.use(cookieParser());6+
+app.use(cookieParser());
 app.use(express.json());
 
 // Routes
