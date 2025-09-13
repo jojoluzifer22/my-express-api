@@ -12,10 +12,11 @@ const login = (req, res) => {
   const token = generateToken(user);
   res.cookie('token', token, {
     httpOnly: true,
-    secure: false,
-    sameSite: 'lax',
+    secure: true,
+    sameSite: 'none',
     maxAge: 1000 * 60 * 60 * 3, 
-    expires: new Date(Date.now() + 3 * 60 * 60 * 1000) 
+    expires: new Date(Date.now() + 3 * 60 * 60 * 1000) ,
+    path : '/'
   });
 
   res.json({
