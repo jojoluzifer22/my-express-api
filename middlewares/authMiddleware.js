@@ -5,7 +5,7 @@ const jwtSecret = require('../config/env');
 const authMiddleware = (req, res, next)=>{
 
     const token = req.cookies.token;
-    if(!token) return res.status(400).json({message: "Unauthorized"});
+    if(!token) return res.status(401).json({message: "No token provided"});
 
     try{
         const user = jwt.verify(token, jwtSecret);
@@ -13,7 +13,7 @@ const authMiddleware = (req, res, next)=>{
         next();
 
     }catch(err){
-      res.json({message: "Invalid Token"});
+      res.status(401).json({message: "Invalid Token"});
     }
 }
 
