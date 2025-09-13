@@ -29,7 +29,7 @@ app.use('/auth' , authRoutes);
 app.use('/profile' , profileRoutes);
 app.use('/users' , userRoutes);
 app.use('/dashboard' , dashboardRoutes);
-app.use('/credit' , creditRoutes);
+app.use('/api/credit' , creditRoutes);
 
 app.get('/' , (req,res)=>{
   res.json({message: "Hello from express on Railway"});
